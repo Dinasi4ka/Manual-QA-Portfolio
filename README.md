@@ -30,4 +30,4 @@ A comprehensive web platform that integrates YouTube API for self-paced learning
 
 ## 📫 Contacts & Professional Profiles
 - **Email:** viychukdiana@gmail.com
-- **LinkedIn:** [Link to my LinkedIn](https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact_info%3BaFB1WD0dTx6G7NqoZG%2FSKA%3D%3D)
+- **LinkedIn:** [Link to my LinkedIn](https://www.linkedin.com/in/diana-viichuk-a025a135b/)
