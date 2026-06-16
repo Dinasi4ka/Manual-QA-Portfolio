@@ -1,4 +1,4 @@
-## 🪲 001: Internal video streaming room fails to load on click
+## 🪲 BR001: Internal video streaming room fails to load on click
 
 | Field | Details |
 | :--- | :--- |
@@ -15,7 +15,7 @@
 
 ---
 
-## 🪲 002: Broken layout and missing buttons on mobile screens
+## 🪲 BR002: Broken layout and missing buttons on mobile screens
 
 | Field | Details |
 | :--- | :--- |
@@ -29,3 +29,20 @@
 | **Severity / Priority** | 🔴 **High / High** |
 | **Status** | 🔓 **OPEN (Unresolved)** |
 | **Environment** | Mobile Safari (iOS 17.5) & Chrome Mobile Emulator |
+
+---
+
+## 🪲 BR003:  Negative Price Accepted for Group Meeting (Boundary Case)
+
+| Field | Details |
+| :--- | :--- |
+| **ID** | 003 |
+| **Title** | Boundary value "-0.01" bypasses price validation and is accepted as valid meeting price |
+| **Preconditions** | 1. Tutor is logged in.2. Group meeting creation form is open. |
+| **Steps** | 1. Fill in all required meeting fields (date, time, topic).2. Enter "-0.01" in the Price field.3. Submit the form. |
+| **Postconditions** | The user is billed an incorrect amount at checkout, leading to either financial loss or a broken payment flow. |
+| **Expected Result** | TSystem rejects the value and returns validation error: "Price must be a positive number." |
+| **Actual Result** | Form submits successfully. Meeting is created with price "-0.01 UAH" stored in the database. |
+| **Severity / Priority** | 🟡 **Medium / Medium** |
+| **Status** | 🔓 **OPEN (Unresolved)** |
+| **Environment** | Google Chrome v125.0, Localhost |
