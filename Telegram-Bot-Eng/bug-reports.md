@@ -40,7 +40,7 @@
 | **Title** | Telegram User ID not updated when user re-registers with a different Telegram account |
 | **Preconditions** | 1. User was previously registered with Phone: +380991234567 using Telegram Account A.2. User now sends /start from a new Telegram Account B with another phone number. |
 | **Steps** | 1. Send /start from new Telegram Account B.2. Enter the phone number.3. Check the database record for Telegram ID. |
-| **Postconditions**  |
+| **Postconditions**  | User registered under Account A continues receiving all reminders; Account B user receives no notifications despite being the active account.
 | **Expected Result** | Telegram ID in the database updates to reflect the new account (Account B's ID). |
 | **Actual Result** | Database retains the old Telegram ID from Account A. Reminder notifications are sent to the wrong account. |
 | **Severity / Priority** | 🟡 **Medium / High** |
