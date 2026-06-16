@@ -1,4 +1,4 @@
-## 🪲 001: Missing "/help" command and menu action
+## 🪲 BR001: Missing "/help" command and menu action
 
 | Field | Details |
 | :--- | :--- |
@@ -15,7 +15,7 @@
 
 ---
 
-## 🪲 002: Data mismatch after manual configuration update
+## 🪲 BR002: Data mismatch after manual configuration update
 
 | Field | Details |
 | :--- | :--- |
@@ -29,3 +29,20 @@
 | **Severity / Priority** | 🔴 **High / High** |
 | **Status** | 🔓 **OPEN (Unresolved)** |
 | **Environment** | Production Bot Environment / External Payment Gateway Interface |
+
+---
+
+## 🪲 BR003: Telegram ID Not Captured on Re-registration
+
+| Field | Details |
+| :--- | :--- |
+| **ID** | 003 |
+| **Title** | Telegram User ID not updated when user re-registers with a different Telegram account |
+| **Preconditions** | 1. User was previously registered with Phone: +380991234567 using Telegram Account A.2. User now sends /start from a new Telegram Account B with another phone number. |
+| **Steps** | 1. Send /start from new Telegram Account B.2. Enter the phone number.3. Check the database record for Telegram ID. |
+| **Postconditions**  |
+| **Expected Result** | Telegram ID in the database updates to reflect the new account (Account B's ID). |
+| **Actual Result** | Database retains the old Telegram ID from Account A. Reminder notifications are sent to the wrong account. |
+| **Severity / Priority** | 🟡 **Medium / High** |
+| **Status** | 🔓 **OPEN (Unresolved)** |
+| **Environment** | Telegram Mobile (iOS 17), Production Bot |
